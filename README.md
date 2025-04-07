@@ -41,29 +41,46 @@ This project is a command-line-based Employee Management System built using nati
 ---
 
 ## Project Structure
-EmployeeManagementSystem/ ├── src/ │ ├── models/ │ │ ├── Employee.java │ │ ├── Payroll.java │ │ ├── Attendance.java │ │ └── Performance.java │ ├── services/ │ │ ├── EmployeeService.java │ │ ├── PayrollService.java │ │ ├── AttendanceService.java │ │ └── PerformanceService.java │ ├── main/ │ │ └── EmployeeManagementApp.java │ └── utils/ │ └── UtilityClass.java ├── test/ │ └── EmployeeServiceTest.java ├── .gitignore └── README.md
 
+```
+EmployeeManagementSystem/
+├── src/
+│   ├── models/
+│   │   ├── Employee.java
+│   │   ├── Payroll.java
+│   │   ├── Attendance.java
+│   │   └── Performance.java
+│   ├── services/
+│   │   ├── EmployeeService.java
+│   │   ├── PayrollService.java
+│   │   ├── AttendanceService.java
+│   │   └── PerformanceService.java
+│   ├── main/
+│   │   └── EmployeeManagementApp.java
+│   └── utils/
+│       └── UtilityClass.java
+├── test/
+│   └── EmployeeServiceTest.java
+├── .gitignore
+└── README.md
+```
 
 ### `src/models/`
-Contains core data models:
 - `Employee.java`: Employee information such as ID, name, position, etc.
 - `Payroll.java`: Salary details, bonuses, and deductions.
 - `Attendance.java`: Clock-in and clock-out tracking.
 - `Performance.java`: Performance evaluation data.
 
 ### `src/services/`
-Business logic for each system component:
 - `EmployeeService.java`: Add, remove, search employees.
 - `PayrollService.java`: Salary calculations.
 - `AttendanceService.java`: Track attendance.
 - `PerformanceService.java`: Manage performance scores.
 
 ### `src/main/`
-Main entry point for the application:
-- `EmployeeManagementApp.java`: CLI-based interface.
+- `EmployeeManagementApp.java`: CLI-based interface entry point.
 
 ### `test/`
-Unit testing:
 - `EmployeeServiceTest.java`: Test functionality of employee operations.
 
 ---
@@ -83,61 +100,83 @@ Unit testing:
 ```bash
 git clone https://github.com/your-username/EmployeeManagementSystem.git
 cd EmployeeManagementSystem
-## Compile the Project
-Using an IDE:
+```
 
-Open the project in IntelliJ IDEA, Eclipse, or your preferred IDE.
+#### Compile the Project (Command Line)
 
-Let the IDE handle the build and dependencies.
-
-Using Command Line:
+```bash
 javac -d bin src/main/EmployeeManagementApp.java src/models/*.java src/services/*.java
-Run the Application
+```
+
+#### Run the Application
+
+```bash
 java -cp bin main.EmployeeManagementApp
-Example Commands in the CLI :
+```
+
+---
+
+## Example Commands in the CLI
+
+```
 Employee Management System
 1. Add Employee
 2. Remove Employee
 3. Search Employee
 4. Update Employee Salary
 5. Exit
-Example Usage
-Add an Employee
+```
 
-Enter 1
+### Example Usage
 
-Provide ID, name, department, position, salary
+- **Add an Employee**  
+  Enter `1` and provide the ID, name, department, position, and salary.
 
-Remove an Employee
+- **Remove an Employee**  
+  Enter `2` and provide the employee ID.
 
-Enter 2
+- **Search for an Employee**  
+  Enter `3` and provide the employee ID.
 
-Provide the employee ID
+- **Update Employee Salary**  
+  Enter `4` and provide the employee ID and new salary.
 
-Search for an Employee
+- **Exit**  
+  Enter `5`.
 
-Enter 3
+---
 
-Provide the employee ID
-
-Update Employee Salary
-
-Enter 4
-
-Provide employee ID and new salary
-
-Exit
-
-Enter 5
 ## Running Unit Tests
-Using an IDE
+
+### Using an IDE
 Right-click on the test class → Run or Run with Coverage
-Using Command Line (if using Maven or Gradle):
+
+### Using Command Line (if using Maven or Gradle):
+
+```bash
 mvn test
+```
+
 or
+
+```bash
 gradle test
-Testing the Application
+```
+
+---
+
+## Testing the Application
+
 Make sure all functions such as adding, removing, updating employees work correctly. Test with edge cases like duplicate IDs, invalid input, and large data sets.
 
-Contributing
+---
+
+## Contributing
+
 Contributions are welcome! Fork the repo, make your changes, and submit a pull request. Make sure to write tests for any new features.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

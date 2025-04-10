@@ -175,8 +175,4 @@ Make sure all functions such as adding, removing, updating employees work correc
 
 Contributions are welcome! Fork the repo, make your changes, and submit a pull request. Make sure to write tests for any new features.
 
----
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
